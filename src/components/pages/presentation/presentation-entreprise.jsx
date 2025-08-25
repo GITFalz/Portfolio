@@ -1,4 +1,6 @@
-"use client"
+import defactoEndroit from "../../../assets/images/defacto-endroit.png";
+import qrFourchetteApp from "../../../assets/images/qr-fourchette-wp.png";
+import tonneliers from "../../../assets/images/tonneliers.png";
 
 export default function PresentationEntreprise({ onImageClick }) {
   return (
@@ -10,27 +12,27 @@ export default function PresentationEntreprise({ onImageClick }) {
           {/* Logo */}
           <div
             className="rounded-lg h-100 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform overflow-hidden"
-            onClick={() => onImageClick && onImageClick("src/assets/images/defacto-endroit.png")}
+            onClick={() => onImageClick && onImageClick(defactoEndroit)}
           >
-            <img src="src/assets/images/defacto-endroit.png" alt="Defacto Logo" className=" object-contain" />
+            <img src={defactoEndroit} alt="Defacto Logo" className=" object-contain" />
           </div>
 
           <div className="space-y-8 overflow-hidden">
             {/* Projet 1 */}
             <div
               className="rounded-lg h-48 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform overflow-hidden"
-              onClick={() => onImageClick && onImageClick("src/assets/images/qr-fourchette-wp.png")}
+              onClick={() => onImageClick && onImageClick(qrFourchetteApp)}
             >
-              <img src="src/assets/images/qr-fourchette-wp.png" alt="Projet 1" className="object-contain" />
+              <img src={qrFourchetteApp} alt="Projet 1" className="object-contain" />
             </div>
             
 
             {/* Projet 2 */}
             <div
               className="rounded-lg h-48 flex items-center justify-center cursor-pointer hover:scale-105 transition-transform overflow-hidden"
-              onClick={() => onImageClick && onImageClick("src/assets/images/tonneliers.png")}
+              onClick={() => onImageClick && onImageClick(tonneliers)}
             >
-              <img src="src/assets/images/tonneliers.png" alt="Projet 2" className="object-contain" />
+              <img src={tonneliers} alt="Projet 2" className="object-contain" />
             </div>
           </div>
         </div>

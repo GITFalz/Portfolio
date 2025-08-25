@@ -1,4 +1,4 @@
-"use client"
+import map from "../../../assets/images/map.png";
 
 export default function ContexteStage({ onImageClick }) {
   return (
@@ -14,9 +14,9 @@ export default function ContexteStage({ onImageClick }) {
           <div className="grid md:grid-cols-2 gap-6 items-start">
             {/* Colonne gauche */}
             <div className="w-100 h-40 overflow-hidden flex items-center justify-center pb-10 cursor-pointer hover:scale-105 transition-transform"
-              onClick={() => onImageClick && onImageClick("src/assets/images/map.png")}
+              onClick={() => onImageClick && onImageClick(map)}
             >
-              <img src="src/assets/images/map.png" alt="Map" className=" h-40" />
+              <img src={map} alt="Map" className=" h-40" />
             </div>
             <div className="bg-white/80 p-4 rounded-lg shadow-sm cursor-pointer hover:scale-105 transition-transform">
               <h3 className="text-lg font-semibold text-gray-800 mb-3">

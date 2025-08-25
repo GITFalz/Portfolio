@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import About from './About'
 import Projects from './Projects'
+import { Link } from 'react-router-dom'
+import pfp from '../../assets/images/profile-photo.png'
 
 export default function Home() {
     const [page, setPage] = useState('main')
@@ -13,9 +15,9 @@ export default function Home() {
                             <h1 className="text-xl font-bold cursor-pointer" onClick={() => setPage('main')}>Schinkel Björnar</h1>
                         </div>
                         <div className="flex items-center space-x-8">
-                            <a href="#about" className="hover:text-gray-600 cursor-pointer" onClick={() => setPage('about')}>About</a>
-                            <a href="#projects" className="hover:text-gray-600 cursor-pointer" onClick={() => setPage('projects')}>Projects</a>
-                            <a href="/Portfolio/presentation" className="hover:text-gray-600 cursor-pointer">Presentation</a>
+                            <Link to="#about" className="hover:text-gray-600 cursor-pointer" onClick={() => setPage('about')}>About</Link>
+                            <Link to="#projects" className="hover:text-gray-600 cursor-pointer" onClick={() => setPage('projects')}>Projects</Link>
+                            <Link to="/presentation" className="hover:text-gray-600 cursor-pointer">Presentation</Link>
                         </div>
                     </div>
                 </div>
@@ -28,7 +30,7 @@ export default function Home() {
                         <div className="text-center mb-8">
                             <div className="mb-4">
                                 <img 
-                                src="./src/assets/images/profile-photo.png"
+                                src={pfp}
                                 alt="Profile" 
                                 className="w-32 h-32 rounded-full mx-auto object-cover border-4 border-white shadow-lg"
                                 />

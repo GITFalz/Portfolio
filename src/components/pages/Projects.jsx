@@ -5,6 +5,10 @@ import ProjectUnity from '../projects/ProjectUnity'
 import ProjectSAE from '../projects/ProjectSAE';
 import ProjectGameEngine from '../projects/ProjectGameEngine';
 
+import buildWorlds from '../../assets/images/build-worlds.png'
+import siteSae from '../../assets/images/site-sae.png'
+import pillarTerrain from '../../assets/images/pillar-terrain.png'
+
 export default function Projects() {
     const [showProjects, setShowProjects] = useState(true);
     const [currentProject, setCurrentProject] = useState(null);
@@ -18,7 +22,7 @@ export default function Projects() {
         <div className="w-full">
             {showProjects ? (<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 <ProjectCard 
-                    image="./src/assets/images/build-worlds.png"
+                    image={buildWorlds}
                     title="Unity Project"
                     description="Unity voxel game"
                     onClick={() => {
@@ -31,7 +35,7 @@ export default function Projects() {
                     mounted={mounted}
                 />
                 <ProjectCard 
-                    image="./src/assets/images/site-sae.png"
+                    image={siteSae}
                     title="SAE Project"
                     description="University website project"
                     onClick={() => {
@@ -44,7 +48,7 @@ export default function Projects() {
                     mounted={mounted}
                 />
                 <ProjectCard 
-                    image="./src/assets/images/pillar-terrain.png"
+                    image={pillarTerrain}
                     title="Game Engine Project"
                     description="C# Voxel game engine"
                     onClick={() => {

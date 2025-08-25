@@ -1,4 +1,5 @@
-"use client"
+import pageDevis from "../../../assets/images/page-devis.png";
+import structureBD from "../../../assets/images/structure-bd.png";
 
 export default function ProjetDevis({ onImageClick }) {
   return (
@@ -42,9 +43,9 @@ export default function ProjetDevis({ onImageClick }) {
             <div className="bg-white rounded-lg p-4 pt-0">
               <div
                 className="w-full h-64 bg-gradient-to-br from-purple-200 to-pink-200 rounded-lg flex items-center justify-center mb-3 cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => onImageClick && onImageClick("src/assets/images/page-devis.png")}
+                onClick={() => onImageClick && onImageClick(pageDevis)}
               >
-                <img src="src/assets/images/page-devis.png" alt="Formulaire de Devis" className="w-full h-full object-cover rounded-lg" />
+                <img src={pageDevis} alt="Formulaire de Devis" className="w-full h-full object-cover rounded-lg" />
               </div>
               <p className="text-sm text-gray-600 text-center">Capture de la page de devis</p>
             </div>
@@ -52,9 +53,9 @@ export default function ProjetDevis({ onImageClick }) {
             <div className="bg-white rounded-lg p-4">
               <div
                 className="w-full h-64 bg-gradient-to-br from-teal-200 to-cyan-200 rounded-lg flex items-center justify-center mb-3 cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => onImageClick && onImageClick("src/assets/images/structure-bd.png")}
+                onClick={() => onImageClick && onImageClick(structureBD)}
               >
-                <img src="src/assets/images/structure-bd.png" alt="Structure de BDD" className="w-full h-full object-cover rounded-lg" />
+                <img src={structureBD} alt="Structure de BDD" className="w-full h-full object-cover rounded-lg" />
               </div>
               <p className="text-sm text-gray-600 text-center">Structure de base de données simplifiée</p>
             </div>

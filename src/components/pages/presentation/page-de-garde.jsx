@@ -1,4 +1,5 @@
-"use client"
+import defactoLogo from "../../../assets/images/defacto-logo.png";
+import iutLogo from "../../../assets/images/iut-logo.png";
 
 export default function PageDeGarde({ onImageClick }) {
   return (
@@ -26,15 +27,15 @@ export default function PageDeGarde({ onImageClick }) {
         <div className="flex justify-center items-center gap-8 mt-8">
           <div
             className="w-20 h-20 rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
-            onClick={() => onImageClick && onImageClick("src/assets/images/defacto-logo.png")}
+            onClick={() => onImageClick && onImageClick(defactoLogo)}
           >
-            <img src="src/assets/images/defacto-logo.png" alt="Defacto Logo" className="w-full h-full object-contain" />
+            <img src={defactoLogo} alt="Defacto Logo" className="w-full h-full object-contain" />
           </div>
           <div
             className="w-20 h-20 rounded-lg flex items-center justify-center cursor-pointer hover:scale-105 transition-transform"
-            onClick={() => onImageClick && onImageClick("src/assets/images/iut-logo.png")}
+            onClick={() => onImageClick && onImageClick(iutLogo)}
           >
-            <img src="src/assets/images/iut-logo.png" alt="IUT Logo" className="w-full h-full object-contain" />
+            <img src={iutLogo} alt="IUT Logo" className="w-full h-full object-contain" />
           </div>
         </div>
       </div>

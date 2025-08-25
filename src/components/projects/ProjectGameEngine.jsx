@@ -1,5 +1,10 @@
 import { useState, useEffect } from "react";
 
+import pillarNodes from "../../assets/images/pillar-nodes.png"
+import pillarTerrain from "../../assets/images/pillar-terrain.png" 
+import swordTexture from "../../assets/images/sword-texture.png"   
+import swordUV from "../../assets/images/uv-sword.png"
+
 function useDateDiff(startDate) {
     const [diff, setDiff] = useState({ months: 0, days: 0 });
 
@@ -120,16 +125,16 @@ export default function ProjectGameEngine() {
                     <h2 className="text-2xl font-bold text-gray-900 mb-4">Screenshots</h2>
                     <div className="grid md:grid-cols-2 gap-4">
                         <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                            <img src="./src/assets/images/pillar-nodes.png" alt="Node System" className="object-cover" />
+                            <img src={pillarNodes} alt="Node System" className="object-cover" />
                         </div>
                         <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                            <img src="./src/assets/images/pillar-terrain.png" alt="Node System" className="object-cover" />
+                            <img src={pillarTerrain} alt="Node System" className="object-cover" />
                         </div>
                         <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                            <img src="./src/assets/images/sword-texture.png" alt="Node System" className="object-cover" />
+                            <img src={swordTexture} alt="Node System" className="object-cover" />
                         </div>
                         <div className="aspect-video bg-gray-200 rounded-lg flex items-center justify-center">
-                            <img src="./src/assets/images/uv-sword.png" alt="Node System" className="object-cover" />
+                            <img src={swordUV} alt="Node System" className="object-cover" />
                         </div>
                     </div>
                 </div>

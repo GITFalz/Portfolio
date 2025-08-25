@@ -1,4 +1,4 @@
-"use client"
+import qrFourchetteApp from "../../../assets/images/qr-fourchette-app.png";
 
 export default function ProjetQRFourchette({ onImageClick }) {
   return (
@@ -53,9 +53,9 @@ export default function ProjetQRFourchette({ onImageClick }) {
             <div className="bg-white rounded-lg p-4">
               <div
                 className="w-full h-[310px] bg-gradient-to-br from-orange-200 to-red-200 rounded-lg flex items-center justify-center mb-3 cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => onImageClick && onImageClick("src/assets/images/qr-fourchette-app.png")}
+                onClick={() => onImageClick && onImageClick(qrFourchetteApp)}
               >
-                <img src="src/assets/images/qr-fourchette-app.png" alt="QR Fourchette App" className="w-full h-full object-cover rounded-lg" />
+                <img src={qrFourchetteApp} alt="QR Fourchette App" className="w-full h-full object-cover rounded-lg" />
               </div>
               <p className="text-sm text-gray-600 text-center">Capture de l'interface menu</p>
             </div>

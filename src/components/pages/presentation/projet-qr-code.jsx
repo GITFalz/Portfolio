@@ -1,4 +1,5 @@
-"use client"
+import nutricode from "../../../assets/images/nutricode.png";
+import qrCode from "../../../assets/images/qr-code.png";
 
 export default function ProjetQRCode({ onImageClick }) {
   return (
@@ -45,9 +46,9 @@ export default function ProjetQRCode({ onImageClick }) {
             <div className="bg-white p-4 rounded-lg shadow-sm">
               <div
                 className="w-full h-48 bg-gradient-to-br from-blue-200 to-blue-300 rounded-lg flex items-center justify-center mb-3 cursor-pointer hover:scale-105 transition-transform"
-                onClick={() => onImageClick && onImageClick("src/assets/images/nutricode.png")}
+                onClick={() => onImageClick && onImageClick(nutricode)}
               >
-                <img src="src/assets/images/nutricode.png" alt="Interface Plugin" className="w-full h-full object-cover rounded-lg" />
+                <img src={nutricode} alt="Interface Plugin" className="w-full h-full object-cover rounded-lg" />
               </div>
               <p className="text-sm text-gray-600 text-center">Capture de l'interface d'administration</p>
             </div>
@@ -56,9 +57,9 @@ export default function ProjetQRCode({ onImageClick }) {
               <div className="bg-white p-4 rounded-lg shadow-sm">
                 <div
                   className="w-full h-48 bg-gradient-to-br from-green-200 to-green-300 rounded-lg flex items-center justify-center mb-2 cursor-pointer hover:scale-105 transition-transform"
-                  onClick={() => onImageClick && onImageClick("src/assets/images/qr-code.png")}
+                  onClick={() => onImageClick && onImageClick(qrCode)}
                 >
-                  <img src="src/assets/images/qr-code.png" alt="QR Code" className="w-full h-full object-cover rounded-lg" />
+                  <img src={qrCode} alt="QR Code" className="w-full h-full object-cover rounded-lg" />
                 </div>
                 <p className="text-xs text-gray-600 text-center">QR généré</p>
               </div>
