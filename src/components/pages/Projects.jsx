@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import ProjectCard from '../utils/ProjectCard'
 import ProjectUnity from '../projects/ProjectUnity'
@@ -8,6 +8,11 @@ import ProjectGameEngine from '../projects/ProjectGameEngine';
 export default function Projects() {
     const [showProjects, setShowProjects] = useState(true);
     const [currentProject, setCurrentProject] = useState(null);
+    const [mounted, setMounted] = useState(false);
+
+    useEffect(() => {
+        setMounted(true);
+    }, []);
 
     return (
         <div className="w-full">
@@ -20,6 +25,10 @@ export default function Projects() {
                         setCurrentProject("unity");
                         setShowProjects(false);
                     }}
+                    style={{
+                        transitionDelay: `${0 * 100}ms`
+                    }}
+                    mounted={mounted}
                 />
                 <ProjectCard 
                     image="./src/assets/images/site-sae.png"
@@ -29,6 +38,10 @@ export default function Projects() {
                         setCurrentProject("sae");
                         setShowProjects(false);
                     }}
+                    style={{
+                        transitionDelay: `${1 * 100}ms`
+                    }}
+                    mounted={mounted}
                 />
                 <ProjectCard 
                     image="./src/assets/images/pillar-terrain.png"
@@ -38,6 +51,10 @@ export default function Projects() {
                         setCurrentProject("game-engine");
                         setShowProjects(false);
                     }}
+                    style={{
+                        transitionDelay: `${2 * 100}ms`
+                    }}
+                    mounted={mounted}
                 />
             </div>) : (
                 <>

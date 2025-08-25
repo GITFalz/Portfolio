@@ -1,6 +1,12 @@
-export default function ProjectCard({ image, title, description, onClick }) {
+export default function ProjectCard({ image, title, description, onClick, mounted, style }) {
     return (
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300" onClick={onClick}>
+        <div 
+            className={`bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden hover:shadow-lg
+                        transition-all duration-700 ease-out transform
+                        ${mounted ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"}`}
+            style={style}
+            onClick={onClick}
+        >
             <div className="aspect-video bg-gray-100">
                 <img 
                 src={image || "/placeholder-project.jpg"} 
