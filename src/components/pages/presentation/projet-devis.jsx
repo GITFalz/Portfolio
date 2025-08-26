@@ -24,7 +24,6 @@ export default function ProjetDevis({ onImageClick }) {
                 <li>• Étapes et options personnalisables</li>
                 <li>• Formulaire personnalisable</li>
                 <li>• Email personnalisable</li>
-                <li>• Envoi par email personnalisé</li>
                 <li>• Calcul automatique du prix</li>
               </ul>
             </div>
